@@ -1,0 +1,15 @@
+[project]
+name = "simple_scrapex"
+version = "0.0.0"
+description = "A simple scraper for tweets from X.com"
+authors = [
+    {name="Charlie Payne"}
+]
+dependencies = ["pandas", "snscrape"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["simple_scrapex"]
