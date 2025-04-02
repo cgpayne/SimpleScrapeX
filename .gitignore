@@ -1,0 +1,11 @@
+# general ignores
+**/__pycache__/*
+
+# data
+data/*
+
+# jupyter notebooks
+notebooks/**/.ipynb_checkpoints/*
+
+# general keeps
+!**/.gitkeep
