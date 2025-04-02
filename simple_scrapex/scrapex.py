@@ -2,10 +2,10 @@ import snscrape.modules.twitter as sntwitter
 import pandas as pd
 from datetime import datetime
 
-def scrape_query(query, max_results=100):
+def scrape_query(query, max_results=10):
     tweets = []
-    for i, tweet in enumerate(sntwitter.TwitterSearchScraper(query).get_items()):
-        if i >= max_results:
+    for ii, tweet in enumerate(sntwitter.TwitterSearchScraper(query).get_items()):
+        if ii >= max_results:
             break
         tweets.append({
             "date": tweet.date.isoformat(),
@@ -15,7 +15,7 @@ def scrape_query(query, max_results=100):
         })
     return tweets
 
-def scrape_queries(queries, max_results=100):
+def scrape_queries(queries, max_results=10):
     all_results = []
     for query in queries:
         result = scrape_query(query, max_results=max_results)
